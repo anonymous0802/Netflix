@@ -95,6 +95,12 @@
   font-size: 16px;
 }
 
+.header__email:focus ~ label,
+.header__email:valid ~ label {
+  top: 3px;
+  font-size: 12px;
+}
+
 .header__btn--try {
   width: 30%;
   padding: 0.4em 1em 0.7em 1em;
@@ -105,6 +111,21 @@
   font-size: 18px;
   font-weight: 400;
   padding: 0.5em 0;
+}
+
+.header__subscribe {
+  position: relative;
+}
+
+.header__subscribe label {
+  position: absolute;
+  top: 22px;
+  left: 16px;
+  color: black;
+  pointer-events: none;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: #a6a6a6;
 }
 
 @media (min-width: 1024px) and (max-width: 1336px) {
@@ -137,6 +158,9 @@
   .header__btn--try {
     padding: 0.3em 1em 0.6em;
     width: 35%;
+  }
+  .header__subscribe label {
+    top: 20px;
   }
 }
 
@@ -173,6 +197,9 @@
     display: block;
     margin: auto;
     margin-bottom: 1.5em;
+  }
+  .header__subscribe label {
+    top: 20px;
   }
 }
 
@@ -221,6 +248,9 @@
     display: block;
     margin: auto;
     margin-bottom: 1em;
+  }
+  .header__subscribe label {
+    top: 18px;
   }
 }
 
