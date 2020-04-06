@@ -71,14 +71,15 @@
   z-index: 100;
   text-align: center;
   color: #ffffff;
-  width: 714px;
+  width: 100%;
+  padding: 0 20%;
 }
 
 .header__title {
   font-size: 64px;
   font-weight: 500;
   line-height: 64px;
-  max-width: 610px;
+  width: 80%;
   margin: auto;
 }
 
@@ -89,13 +90,13 @@
 }
 
 .header__email {
-  width: 65%;
+  width: 70%;
   padding: 1.6em 1em 1.3em 1em;
   font-size: 16px;
 }
 
 .header__btn--try {
-  width: 35%;
+  width: 30%;
   padding: 0.4em 1em 0.7em 1em;
   font-size: 28px;
 }
@@ -120,6 +121,7 @@
   }
   .header__card {
     top: 242px;
+    padding: 0 15%;
   }
   .header__logo {
     width: 134px;
@@ -130,9 +132,11 @@
   }
   .header__email {
     padding: 1.2em 1em 1em;
+    width: 65%;
   }
   .header__btn--try {
     padding: 0.3em 1em 0.6em;
+    width: 35%;
   }
 }
 
@@ -147,8 +151,8 @@
     width: 108px;
   }
   .header__card {
-    width: 510px;
-    top: 242px;
+    top: 192px;
+    padding: 0 12%;
   }
   .header__title {
     width: 100%;
@@ -176,6 +180,11 @@
   .header {
     height: 504px;
   }
+  .header__btn--sign {
+    padding: 6px 12px;
+    margin-top: 6px;
+    font-size: 14px;
+  }
   .header__shadow {
     height: 504px;
   }
@@ -183,7 +192,7 @@
     width: 88px;
   }
   .header__card {
-    width: 90%;
+    padding: 0 5%;
     top: 168px;
   }
   .header__title {
