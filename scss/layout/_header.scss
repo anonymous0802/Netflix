@@ -1,0 +1,189 @@
+.header {
+    height: 742px;
+    width: 100%;
+    overflow: hidden;
+    font-size: 16px;
+    &__img--bg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    &__shadow {
+        width: 100%;
+        height: 742px;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.8) 100%);
+        background-color: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        top: 0;
+        z-index: 10;
+    }
+    &__nav {       
+        width: 92%; 
+        height: 45px;
+        background-color: transparent;
+        position: absolute;
+        top: 20px;
+        left: 4%;
+        right: 4%;
+    }
+    &__logo, &__btn--sign {
+        position: relative;
+        z-index: 100;
+    }
+    &__logo {
+        width: 166px;
+        height: inherit;
+        fill: $clr-bg--red;
+        float: left;
+    }
+    &__btn--sign {
+        padding: 8px 18px;
+        margin-top: 6px;
+        font-size: inherit;
+        float: right;
+        border-radius: 4px;
+    }
+    &__card {
+        position: absolute;
+        top: 280px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 100;
+        text-align: center;
+        color: $clr-ft--white;
+        width: 714px;
+    }
+    &__title {
+        font-size: 64px;
+        font-weight: $fw-medium;
+        line-height: 64px;
+        max-width: 610px;
+        margin: auto;
+    }
+    &__subtitle {
+        padding: 0.8em 0 1.2em;
+        font-size: 26px;
+        font-weight: $fw-medium;
+    }
+    &__email {
+        width: 65%;
+        padding: 1.6em 1em 1.3em 1em;
+        font-size: 16px;
+    }
+    &__btn--try {
+        width: 35%;
+        padding: 0.4em 1em 0.7em 1em;
+        font-size: 28px;
+    }
+    &__note {
+        font-size: 18px;
+        font-weight: $fw-regular;
+        padding: 0.5em 0;
+    }
+}
+
+@include breakpoint(laptop) {
+    .header {
+        height: 672px;
+        &__img--bg {
+            width: 100%;
+            object-fit: fill;
+        }
+        &__shadow {
+            height: 672px;
+        }
+        &__card {
+            top: 242px;
+        }
+        &__logo {
+            width: 134px;
+        }
+        &__title {
+            font-size: 56px;
+            line-height: 56px;
+        }
+        &__email {
+            padding: 1.2em 1em 1em;
+        }
+        &__btn--try {
+            padding: 0.3em 1em 0.6em;
+        }
+    }
+}
+@include breakpoint(tablet) {
+    .header {
+        height: 710px;
+        &__shadow {
+            height: 710px;
+        }
+        &__logo {
+            width: 108px;
+        }
+        &__card {
+            width: 510px;
+            top: 242px;
+        }
+        &__title {
+            width: 100%;
+            font-size: 50px;
+            line-height: 50px;
+        }
+        &__email {
+            width: 100%;
+            padding: 1em;
+        }
+        &__btn--try {
+            width: auto;
+            font-size: 16px;
+            padding: 0.8em 1em;
+            border-radius: 4px;
+        }
+        &__email, &__btn--try {
+            display: block;
+            margin: auto;
+            margin-bottom: 1.5em;
+        }
+    }
+}
+@include breakpoint(mobile) {
+    .header {
+        height: 504px;
+        &__shadow {
+            height: 504px;
+        }
+        &__logo {
+            width: 88px;
+        }
+        &__card {
+            width: 90%;
+            top: 168px;
+        }
+        &__title {
+            width: 100%;
+            font-size: 28px;
+            line-height: 28px;
+        }
+        &__subtitle {
+            font-size: 18px;
+        }
+        &__email {
+            width: 100%;
+            padding: 1em;
+        }
+        &__note {
+            font-size: 16px;
+            padding: 0;
+        }
+        &__btn--try {
+            width: auto;
+            font-size: 16px;
+            padding: 0.8em 1em;
+            border-radius: 4px;
+        }
+        &__email, &__btn--try {
+            display: block;
+            margin: auto;
+            margin-bottom: 1em;
+        }
+    }
+}
