@@ -1,0 +1,90 @@
+@import '../abstracts/mixins';
+
+.subscribe {
+    position: relative;
+    .email {
+        width: 68%;
+        padding: 1.6em 1em 1.3em 1em;
+        font-size: 16px;
+        border: none;
+        border-radius: 4px;
+    }
+    .email:focus ~ label,
+    .email:valid ~ label {
+        top: 3px;
+        font-size: 12px;
+    }
+    .btn--try {
+        width: 32%;
+        padding: 0.4em 0 0.7em;
+        font-size: 28px;
+    }
+    label {
+        position: absolute;
+        top: 22px;
+        left: 16px;
+        color: black;
+        pointer-events: none;
+        transition: 0.4s;
+        color: $clr-ft--gray;
+    }
+}
+@include breakpoint(laptop) {
+    .subscribe{
+        .email {
+            padding: 1.2em 1em 1em;
+            width: 68%;
+        }
+        .btn--try {
+            padding: 0.3em 0 0.6em;
+            width: 32%;
+        }
+        label {
+            top: 20px;
+        }
+    }
+}
+@include breakpoint(tablet) {
+    .subscribe{
+        .email {
+            width: 100%;
+            padding: 1em;
+        }
+        .btn--try {
+            width: auto;
+            font-size: 16px;
+            padding: 0.8em 1em;
+            border-radius: 4px;
+        }
+        .email, .btn--try {
+            display: block;
+            margin: auto;
+            margin-bottom: 1.5em;
+        }
+        label {
+            top: 20px;
+        }
+    }
+}
+@include breakpoint(mobile) {
+    .subscribe{
+        .email {
+            width: 100%;
+            padding: 1em;
+        }
+        .btn--try {
+            width: auto;
+            font-size: 16px;
+            padding: 0.8em 1em;
+            border-radius: 4px;
+        }
+        .email, .btn--try {
+            display: block;
+            margin: auto;
+            margin-bottom: 1em;
+        }
+        label {
+            top: 18px;
+        }
+    }
+}

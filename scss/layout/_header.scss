@@ -3,6 +3,7 @@
     width: 100%;
     overflow: hidden;
     font-size: 16px;
+    border-bottom: 8px solid $clr-bd--gray;
     &__img--bg {
         height: 100%;
         width: 100%;
@@ -52,7 +53,7 @@
         text-align: center;
         color: $clr-ft--white;
         width: 100%;
-        padding: 0 20%;
+        padding: 0 25%;
     }
     &__title {
         font-size: 64px;
@@ -66,37 +67,13 @@
         font-size: 26px;
         font-weight: $fw-medium;
     }
-    &__email {
-        width: 70%;
-        padding: 1.6em 1em 1.3em 1em;
-        font-size: 16px;
-    }
-    &__email:focus ~ label,
-    &__email:valid ~ label {
-        top: 3px;
-        font-size: 12px;
-    }
-    &__btn--try {
-        width: 30%;
-        padding: 0.4em 1em 0.7em 1em;
-        font-size: 28px;
+    &__subscribe {
+        @extend .subscribe; 
     }
     &__note {
         font-size: 18px;
         font-weight: $fw-regular;
         padding: 0.5em 0;
-    }
-    &__subscribe {
-        position: relative;
-        label {
-            position: absolute;
-            top: 22px;
-            left: 16px;
-            color: black;
-            pointer-events: none;
-            transition: 0.4s;
-            color: $clr-ft--gray;
-        }
     }
 }
 
@@ -112,7 +89,7 @@
         }
         &__card {
             top: 242px;
-            padding: 0 15%;
+            padding: 0 20%;
         }
         &__logo {
             width: 134px;
@@ -120,19 +97,6 @@
         &__title {
             font-size: 56px;
             line-height: 56px;
-        }
-        &__email {
-            padding: 1.2em 1em 1em;
-            width: 65%;
-        }
-        &__btn--try {
-            padding: 0.3em 1em 0.6em;
-            width: 35%;
-        }
-        &__subscribe{
-            label {
-                top: 20px;
-            }
         }
     }
 }
@@ -150,29 +114,8 @@
             padding: 0 12%;
         }
         &__title {
-            width: 100%;
             font-size: 50px;
             line-height: 50px;
-        }
-        &__email {
-            width: 100%;
-            padding: 1em;
-        }
-        &__btn--try {
-            width: auto;
-            font-size: 16px;
-            padding: 0.8em 1em;
-            border-radius: 4px;
-        }
-        &__email, &__btn--try {
-            display: block;
-            margin: auto;
-            margin-bottom: 1.5em;
-        }
-        &__subscribe{
-            label {
-                top: 20px;
-            }
         }
     }
 }
@@ -202,29 +145,9 @@
         &__subtitle {
             font-size: 18px;
         }
-        &__email {
-            width: 100%;
-            padding: 1em;
-        }
-        &__note {
+        .note {
             font-size: 16px;
             padding: 0;
-        }
-        &__btn--try {
-            width: auto;
-            font-size: 16px;
-            padding: 0.8em 1em;
-            border-radius: 4px;
-        }
-        &__email, &__btn--try {
-            display: block;
-            margin: auto;
-            margin-bottom: 1em;
-        }
-        &__subscribe{
-            label {
-                top: 18px;
-            }
         }
     }
 }
