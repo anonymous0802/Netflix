@@ -14,11 +14,20 @@
         margin: 0.5em 0;
 
     }
-    &__question {
+    &__question--box {
         width: 100%;
         max-width: 815px;
         margin: auto;
-        margin-top: 4px;
+        margin-top: 8px;
+        background-color: $clr-bg--darkgray;
+        font-size: 26px;
+        padding: 1em 2em;
+    }
+    &__answer--box {
+        width: 100%;
+        max-width: 815px;
+        margin: auto;
+        margin-top: 2px;
         background-color: $clr-bg--darkgray;
         font-size: 26px;
         padding: 1em 2em;
@@ -44,6 +53,8 @@
         float: right;
         cursor: pointer;
         padding: 4px;
+        font-size: 28px;
+        line-height: 28px;
     }
 }
 @include breakpoint(tablet) {
@@ -51,9 +62,13 @@
         &__title {
             font-size: 40px;
         }
-        &__question {
+        &__question--box, &__answer--box {
             font-size: 20px;
             padding: 0.8em 1.5em;
+        }
+        &__label {
+            font-size: 20px;
+            line-height: 20px;
         }
     }
 }
@@ -65,9 +80,13 @@
         &__title {
             font-size: 26px;
         }
-        &__question {
+        &__question--box, &__answer--box {
             font-size: 18px;
             padding: 0.8em 1.5em;
+        }
+        &__label {
+            font-size: 18px;
+            line-height: 18px;
         }
         &__subscribe {
             margin: 1em;
